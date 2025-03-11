@@ -13,17 +13,27 @@ Cada proyecto sigue la misma organización interna, separando las fases de entre
  ├── 📂 entrenamiento/
  
  │    ├── prompt.txt
+ 
  │    ├── ...
+ 
  ├── 📂 pruebas/
+ 
  │    ├── prompt.txt
+ 
  │    ├── ...
  
 📂 AthenaTraining/
+
  ├── 📂 entrenamiento/
+ 
  │    ├── prompt.txt
+ 
  │    ├── ...
+ 
  ├── 📂 pruebas/
+ 
  │    ├── prompt.txt
+ 
  │    ├── ...
  EntrenamientoConversación.html
 
