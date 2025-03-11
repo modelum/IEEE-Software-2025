@@ -8,7 +8,8 @@ transformación y evolución de los DSLs Orion y Athena.
 
 Cada proyecto sigue la misma organización interna, separando las fases de entrenamiento y pruebas, con los correspondientes prompts utilizados. Además se adjunta una conversación tenida con el modelo siguiendo los prompts planteados con modificaciones mínimas.
 
-📂 OrionTraining/
+📂 OrionTraining/ 
+
  ├── 📂 entrenamiento/
  
  │    ├── prompt.txt
