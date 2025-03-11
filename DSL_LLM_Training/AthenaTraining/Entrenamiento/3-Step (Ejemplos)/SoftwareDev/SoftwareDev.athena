@@ -1,0 +1,65 @@
+Schema SoftwareDev:1
+
+FSet Popularity_features
+{
+  num_forks: Integer (0..1000),
+  num_stars: Integer (0..1000)
+}
+
+FSet Timestamp_features
+{
+  created_time: Timestamp,
+  last_activity_date:Timestamp
+}
+
+Root entity Developer
+{
+  Common
+  {
+    +id: Identifier,
+    dev_info: Aggr<DeveloperInfo>&,
+    !email: String /^.+@.+\\.com$/,
+    permissions: String in ("R","W","X","RW","RX","WX","RWX")
+  }
+  Variation 1
+  {
+    is_active: Boolean
+  }
+  Variation 2
+  {
+    suspended_acc: Option<String, Boolean>
+  }
+}
+
+Entity DeveloperInfo
+{
+  ?about_me: String,
+  name: String /^[A-Z][a-z]*$/,
+  team: String
+}
+
+Root entity Repository
+{
+  +id: Identifier,
+  developers: Ref<Developer>+,
+  requests: [{branch: String, status: String in ("Open", "Closed"), numLabels: Number}],
+  ?tags: List<String>,
+  title: String,
+  url: String
+}U Popularity_features
+ U Timestamp_features
+
+Root entity Ticket
+  SQL CREATE TABLE Ticket(
+    id VARCHAR(255)NOT NULL,
+    message VARCHAR(255)NOT NULL,
+    repository_id VARCHAR(255)NOT NULL,
+    developer_id VARCHAR(255)NOT NULL,
+    FOREIGN KEY (repository_id)
+ REFERENCES Repository(id),
+    FOREIGN KEY (developer_id)
+ REFERENCES Developer (id),
+    PRIMARY KEY (id)
+  );
+ +Popularity_features
+ +Timestamp_features

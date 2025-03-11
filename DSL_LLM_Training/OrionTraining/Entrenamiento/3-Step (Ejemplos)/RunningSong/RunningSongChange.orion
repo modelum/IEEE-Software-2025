@@ -1,0 +1,18 @@
+running_songs operations
+
+USING running_songs:1
+
+EBlock 1
+{
+  RENAME ENTITY Author TO Artist
+  RENAME Artist::preferredAlbum TO albums
+  DELETE *::popularity
+}
+
+EBlock 2
+{
+  CAST ATTR *::length TO Double
+  NEST Track::score, voters TO Rating
+}
+
+

@@ -1,0 +1,87 @@
+Schema GameTracker:2
+
+Root entity GamePlayer
+{
+  Common
+  {
+    +id: Identifier,
+    nickname: String,
+    avatar_url: String /^https/,
+    status: Integer ( 0 .. 5 ),
+    last_activity: Timestamp,
+    user_private_data: Ref<Player_Data>&,
+    player_Data: Aggr<Player_Data>&,
+    email: String /^.+@.+\\.com$/
+  }
+  Variation 1
+  {
+    experience: Double,
+    hours_played: Double,
+    ach_earned: Aggr<Ach_Summary>+,
+    score: Double
+  }
+}
+
+Root entity Player_Data
+{
+  +id: Identifier,
+  country_code: Integer,
+  name: String,
+  ?birthday: Timestamp,
+  reputation: Double,
+  suspended: Boolean,
+  surname: String,
+  homepage: String,
+  address: Aggr<Address>+
+}
+
+Entity Ach_Summary
+{
+  achievement: Ref<Achievement>&,
+  of_the_day: Boolean,
+  ?is_completed: Boolean,
+  ?points: Double
+}
+
+Root entity Achievement
+{
+  +id: Identifier,
+  categories: List<String>,
+  description: String,
+  points: Double
+}
+
+Root entity Game
+{
+  +id: Identifier,
+  achievements: Ref<Achievement>+,
+  date_from: Timestamp,
+  genres: List<String>,
+  title: String,
+  ?description: String,
+  ?max_players: Integer
+}
+
+Root entity Guild
+{
+  +id: Identifier,
+  +code: String,
+  name: String,
+  num_players: Number,
+  realm: Aggr<Realm>&
+}
+
+Entity Realm
+{
+  num_guilds: Number,
+  max_guilds: Number,
+  num_players: Number,
+  max_players: Number,
+  type: String
+}
+
+Entity Address
+{
+  city: String,
+  country: String
+}

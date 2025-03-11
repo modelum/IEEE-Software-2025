@@ -1,0 +1,26 @@
+EduPlatform operations
+
+USING EduPlatform:1
+
+ADD ENTITY Certificate: { +id: Identifier, date_issued: Timestamp }
+ADD REF Certificate::course: Identifier& TO Course
+ADD REF Certificate::user: Identifier& TO User
+
+RENAME ENTITY Comment TO Feedback
+
+DELETE Course::tags
+UNNEST Course::lessons.comments
+ADD AGGR Course::statistics: {
+    num_students: Number, avg_rating: Double, num_lessons: Number
+}& AS CourseStats
+ADD AGGR UserProfile::social_links: { github: String, linkedin: String }& AS SocialLinks
+MULT AGGR UserProfile::social_links TO +
+
+RENAME Lesson::content TO lesson_material
+
+NEST User::profile.displayName, profile.bio TO UserProfile
+ADD ATTR UserProfile::experience: String
+CAST ATTR *::duration TO Double
+
+
+

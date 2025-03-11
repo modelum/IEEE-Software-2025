@@ -1,0 +1,29 @@
+Voy a entrenarte para el aprendizaje del DSL Athena. Para ello te proporcionaré la siguiente información en 3 fases:
+- Fase 1: Te mostraré la definición formal del DSL.
+- Fase 2: Te mostraré articulos relacionados sobre su creacion, explicación, restricciones y características.
+- Fase 3: Te mostraré ejemplos de Athena a SQL, MongoDB Validator y Cassandra
+Mientras que te voy enseñando las fases no quiero que digas nada, simplemente memoriza lo que te voy a añadir. Posteriormente cuando recibas la información
+en cada prompt quiero que respondas con "Recibido". Cuando escriba "Fin del entrenamiento" entonces quiero que muestres:
+- Comentarios o valoraciones sobre tu aprendizaje (detalla como ha sido tu experiencia y que opinas del dsl).
+- Dudas o sugerencias (di dudas que sean ambigüas o puedan aclararse para una mayor comprensión).
+
+-------------------------------------------------------------------------------------------------------------
+
+Fase 1: Aquí se adjunta el fichero con la declaración formal
+
+-------------------------------------------------------------------------------------------------------------
+
+Fase 2: Aquí se adjuntan los ficheros con articulos relacionados con el DSL
+
+-------------------------------------------------------------------------------------------------------------
+
+Fase 3: Aquí se proporcionan 5 ejemplos junto con sus correspondientes mapeos a esquemas relacionales, cassandra y mongodb.create con validator.
+
+-------------------------------------------------------------------------------------------------------------
+
+Fin del entrenamiento.
+
+-------------------------------------------------------------------------------------------------------------
+
+Resolución de dudas en caso de haberlas
+

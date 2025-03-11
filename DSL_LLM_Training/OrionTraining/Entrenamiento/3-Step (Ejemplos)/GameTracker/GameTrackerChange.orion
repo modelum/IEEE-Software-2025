@@ -1,0 +1,31 @@
+GameTracker_ops operations
+
+USING GameTracker:1
+
+// Schema Type operations
+ADD ENTITY Guild: { +id: Identifier, code: String, name: String, num_players: Number }
+RENAME ENTITY Player TO GamePlayer
+ADAPT ENTITY GamePlayer::2 TO 1
+
+// Feature operations
+DELETE Achievement::is_active
+RENAME Ach_Summary::completed_at TO is_completed
+NEST GamePlayer::reputation, suspended TO Player_Data
+UNNEST GamePlayer::user_data.email
+
+// Attribute operations
+ADD ATTR Player_Data::surname: String
+ADD ATTR Player_Data::homepage: String
+CAST ATTR *::score, points TO Double
+CAST ATTR Ach_Summary::is_completed TO Boolean
+PROMOTE ATTR Guild::code
+
+// Aggregate operations
+ADD AGGR Guild::realm: {
+num_guilds: Number, max_guilds: Number, num_players: Number, max_players: Number, type: String
+}& AS Realm
+ADD AGGR Player_Data::address: { country: String, city: String }& AS Address
+MULT AGGR Player_Data::address TO +
+MORPH AGGR GamePlayer::user_data TO user_private_data
+
+// En el schema Athena nuevo a generar se deberá incrementar el número de la versión.

@@ -1,0 +1,24 @@
+Schema SoftwareProject:1
+
+Import SoftwareDev:1
+
+Root entity Project
+{
+  +id: Identifier,
+  developers: Ref<ProjectDeveloper>+,
+  due_date: Timestamp,
+  name: String,
+  repositories:Ref<SoftwareDev:1.Repository>+
+}
+
+Root entity ProjectManager::SoftwareDev:1.Developer
+{
+  in_active: Boolean,
+  managed_projects:Integer
+}
+
+Root entity ProjectDeveloper::SoftwareDev:1.Developer
+{
+  languages: List<String>,
+  solved_tickets: Ref<SoftwareDev:1.Ticket>+
+}

@@ -1,0 +1,56 @@
+Schema Vigilancias:1
+
+Root entity Departamento
+{
+  +siglas: Identifier,
+  nombre: String,
+  cuantos_profesores: Integer (0..99)
+}
+
+Root entity Profesor
+{
+  +DNI: Identifier,
+  nombre: String,
+  ?!email: String,
+  categoria: String in ("CU", "TU", "CEU", "TEU", "AYD", "ASO", "CD") ,
+  departamento: Ref<Departamento>&,
+  ?asignatura: Ref<Asignatura>?,
+  ?creditos: Integer (1..99),
+  TelefonoProfesores: aggr<TelefonoProfesor>+
+}
+
+Root entity Asignatura
+{
+  +codigo: Identifier,
+  nombre: String,
+  cuatrimestre: Integer in (0, 1, 2),
+  departamento: Ref<Departamento>&,
+  !coordinador: Ref<Profesor>&,
+  ?prerrequisito: Ref<Asignatura>?,
+  Examenes: Aggr<Examen>+
+}
+
+entity Examen
+{
+  curso: String,
+  convocatoria: String in ("Junio", "Julio", "Enero"),
+  fecha_hora: Timestamp,
+  duracion: Integer (1..999),
+  vigilante: Ref<Profesor>&,
+  aula: Ref<Aula>+
+}
+
+Root entity Aula
+{
+  +codigo: Identifier,
+  capacidad: Integer (1..999),
+  puestos_examen: Integer (1..999),
+  ?nombre: String,
+  centro: String
+}
+
+entity TelefonoProfesor
+{
+  telefono: Integer (600000000..999999999)
+}
+

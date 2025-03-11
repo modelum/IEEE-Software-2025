@@ -1,0 +1,45 @@
+Schema CentroDeportivo:1
+
+Root entity Instalacion
+{
+  +instalacion_id: Identifier,
+  nombre: String,
+  tipo: String in ("Interior", "Exterior"),
+  m2: Double (1..9999999)
+}
+
+Root entity Monitor
+{
+  +dni: Identifier,
+  nombre: String,
+  telefono: Integer,
+  fcontrato: Timestamp,
+  salario: Double (0..999999),
+  especialista: ref<Actividad>+
+}
+
+Root entity Actividad
+{
+  +actividad_id: Identifier,
+  nombre: String,
+  nivel: Integer (1..5),
+  ?precio: Double (0..9999),
+  responsable: Ref<Monitor>&,
+  instalacion: Ref<Instalacion>&,
+  sesiones: Aggr<Sesion>*
+}
+
+// Se puede hacer asi pero uso diseño document-oriented
+//relationship Especialista
+//{
+//  monitor: Ref<Monitor>&,
+//  actividad: Ref<Actividad>&
+//}
+
+entity Sesion
+{
+  diasemana: String in ("L", "M", "X", "J", "V", "S"),
+  hora: Double,
+  monitor: Ref<Monitor>&
+}
+

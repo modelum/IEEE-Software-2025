@@ -1,0 +1,41 @@
+A continuación se te plantearán una serie de ejercicios para que podamos comprobar los resultados de tu aprendizaje. Aquí se describen brevemente los ejercicios.
+1. Convertir un esquema SQL a Athena. 
+2. Convertir un esquema Cassandra a Athena.
+3. Convertir un MongoDB con validator a Athena.
+4. Ejemplo en lenguaje natural a Athena.
+Solo quiero que des la respuesta clarificada a lo que se te pide, mostrando el resultado en un formato claro. 
+
+-------------------------------------------------------------------------------------------------------------
+
+1. Pasame de un esquema SQL a Athena. Fichero: Pruebas/Athena2Esquemas/SQL2Athena.sql
+
+-------------------------------------------------------------------------------------------------------------
+
+2. Pasame de un esquema Cassandra a Athena. Fichero: Pruebas/Athena2Esquemas/Cassandra2Athena.cql
+
+-------------------------------------------------------------------------------------------------------------
+
+3. Pasame de un esquema MongoDB con validator a Athena. Fichero: Pruebas/Athena2Esquemas/MongoValidator2Athena.js
+
+-------------------------------------------------------------------------------------------------------------
+
+4. Pasame desde lenguaje natural hacia Athena. Fichero: Pruebas/Athena2Esquemas/LenguajeNatural2Athena.txt
+
+-------------------------------------------------------------------------------------------------------------
+
+A continuación se realizará el mapeo en dirección inversa. Te mostraré un esquema Athena y tienes que convertirlos a sus correspondientes esquemas:
+1. Convertir el esquema Athena a SQL. 
+2. Convertir el esquema Athena a Cassandra.
+3. Convertir el esquema Athena a MongoDB con validator.
+4. Realizarme una especificación al lenguaje natural
+¿Estas preparado?
+
+---------------------------------------------------------------------
+
+Este es el ejemplo Athena. Haz las transformaciones solicitadas. Fichero: Pruebas/Athena2Esquemas/EduPlatform.athena
+
+---------------------------------------------------------------------
+
+
+Felicidades, has aprendido correctamente el DSL Athena. 
+Usa tu función de memoria para recordarlo y para poder hacer uso de él en otros chats. 

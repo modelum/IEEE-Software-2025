@@ -1,0 +1,86 @@
+Schema Umugram:1
+
+fSet MetaInfo
+{
+  create_at: Timestamp,
+  update_at: Timestamp
+}
+
+root entity User
+{
+  +id: Identifier,
+  !username: String,
+  !email: String /^.+@.+\\.com$/,
+  password: String,
+  birthday: Timestamp,
+  profile: {nameProfile: String,
+  ?avatar_url: String,
+  ?decription: String,
+  ?website: String},
+  followers: ref<User>*,
+  following: ref<User>*,
+  userComments: ref<Comment>*,
+  userPosts: ref<Post>*
+} U MetaInfo
+
+root entity Comment
+{
+  +id: Identifier,
+  text: String,
+  post: ref<Post>&,
+  replyTo: ref<Comment>&,
+  user: ref<User>&
+} + MetaInfo
+
+root entity Post
+{
+  Common
+  {
+    +id: Identifier,
+    ?caption: String,
+    user: ref<User>&,
+    ?description: String
+  } + MetaInfo
+  
+  Variation 1
+  {
+    photoUrl: String
+  }
+  Variation 2
+  {
+    videoUrl: String,
+    duration: double,
+    lastMinute: double
+  }
+}
+
+/*Tambien se puede ver como una herencia 
+ 
+root entity Post{
+	+id: Identifier,
+	?caption: String,
+	user: ref<User>&,
+	?description: String
+}
+
+entity PhotoPost::Post{
+	photoUrl: String
+}
+
+entity VideoPost::Post{
+	videoUrl: String,
+    duration: double,
+    lastMinute: double
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
