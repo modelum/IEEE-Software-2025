@@ -10,6 +10,7 @@ Cada proyecto sigue la misma organización interna, separando las fases de entre
 
 📂 OrionTraining/
  ├── 📂 entrenamiento/
+ 
  │    ├── prompt.txt
  │    ├── ...
  ├── 📂 pruebas/
