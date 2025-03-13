@@ -34,7 +34,6 @@ Cada proyecto sigue la misma organización interna, separando las fases de entre
  
  │    ├── prompt.txt
  
- │    ├── ...
  EntrenamientoConversación.html
 
 # Descripción de los Archivos
