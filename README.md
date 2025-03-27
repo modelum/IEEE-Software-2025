@@ -2,11 +2,19 @@
 
 Este repositorio contiene los proyectos OrionTraining y AthenaTraining, donde se han llevado a cabo procesos 
 de entrenamiento y validación de modelos de lenguaje para la comprensión, 
-transformación y evolución de los DSLs Orion y Athena.
+transformación y evolución de los DSLs Orion [1] y Athena [2].
+
+[1] Alberto Hernández Chillón, Meike Klettke, Diego Sevilla Ruiz, Jesús García Molina:
+A Generic Schema Evolution Approach for NoSQL and Relational Databases. IEEE Trans. Knowl. Data Eng. 36(7): 2774-2789 (2024)
+(https://ieeexplore.ieee.org/abstract/document/10420500)
+
+[2] 	Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina:
+Athena: A Database-Independent Schema Definition Language. ER (Workshops) 2021: 33-42
+(https://www.researchgate.net/publication/355185841_Athena_A_Database-Independent_Schema_Definition_Language)
 
 # Estructura del Repositorio
 
-Cada proyecto sigue la misma organización interna, separando las fases de entrenamiento y pruebas, con los correspondientes prompts utilizados. Además se adjunta una conversación tenida con el modelo siguiendo los prompts planteados con modificaciones mínimas.
+Cada proyecto sigue la misma organización interna, separando las fases de entrenamiento y pruebas, con los correspondientes prompts utilizados. Además se adjunta una conversación con el modelo que sigue los prompts que se han lanzado pero con modificaciones mínimas.
 
 📂 OrionTraining/ 
 
@@ -48,5 +56,5 @@ Los prompts están separados por el delimitador "----", lo que permite diferenci
 
 1. Consultar los prompts.
 2. Ejecutar los prompts.
-3. Evaluar resultados. Hay resultados que requerirán de resulución de dudas para 
+3. Evaluar resultados. Hay resultados que requerirán de resolución de dudas para 
 mejorar el modelo. 
