@@ -1,0 +1,57 @@
+A series of exercises will now be presented to you so that we can verify the results of your learning. Here’s a brief description of the exercises:
+    1. Convert an SQL schema to Athena.
+    2. Convert a Cassandra schema to Athena.
+    3. Convert a MongoDB schema with a validator to Athena.
+    4. Convert a natural language example to Athena.
+I only want you to provide a clear, clarified answer to what is requested, showing the result in a clear format.
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+1. Convert an SQL schema to Athena.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/SQL2Athena.sql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+2. Convert a Cassandra schema to Athena.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/Cassandra2Athena.cql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+3. Convert a MongoDB schema with validator to Athena.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/MongoValidator2Athena.js]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+4. Convert from natural language to Athena.
+
+[Instruction]
+You must pass him: [File: Schema2Athena/NaturalLanguage2Athena.txt]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Next, the mapping will be done in the opposite direction. I will show you an Athena schema and you have to convert it into its 
+corresponding schemas:
+    1. Convert the Athena schema to SQL.
+    2. Convert the Athena schema to Cassandra.
+    3. Convert the Athena schema to MongoDB with validator.
+    4. Provide a specification in natural language.
+This is the Athena example. Perform the requested transformations.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Athena2Schema/EduPlatform.athena]
+
+---------------------------------------------------------------------
+
+Congratulations, you have successfully learned the Athena DSL.
+Use your memory function to remember it and to be able to use it in other chats.

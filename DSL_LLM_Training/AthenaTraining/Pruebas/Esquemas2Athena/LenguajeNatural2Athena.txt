@@ -1,6 +1,0 @@
-Se desea diseñar un esquema de bases de datos para la gestión de las publicaciones de libros por parte de editoriales. Los libros tienen un código y un título. De cada autor/a se desea registrar su identificador,
-nombre y nacionalidad. Las editoriales tienen un código, denominación, dirección y correo electrónico de
-contacto. Una editorial publica muchos libros distintos. Un mismo libro puede estar publicado por más de una editorial. Cada autor/a lo puede ser de varios libros. Un libro sólo ha sido escrito por un/a autor/a.
-Todas las editoriales han publicado al menos un libro. No hay libros no publicados por una editorial y
-tampoco hay libros anónimos. No tenemos libros de todos los autores.
-También interesa conocer el precio con el que cada libro es comercializado por cada editorial.

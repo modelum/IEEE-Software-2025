@@ -1,0 +1,53 @@
+Next: I will additionally provide you with an Athena schema. I want you to create an Orion file based on schema modification code from the following languages:
+    1. Code in SQL
+    2. Code in CQL
+    3. Code in Cypher
+    4. Code in MongoDB
+I also want you to attach the new Athena schema that would be generated if we applied the transformations from the obtained Orion script.
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+1. Convert an SQL schema to Orion.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/SQL2Orion.sql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+2. Convert an CQL schema to Orion.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/CQL2Orion.cql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+3. Convert an Cypher schema to Orion.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/Neo4j2Orion.cypher]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+4. Convert an MongoDB schema to Orion.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/MongoDB2Orion.js]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Now comes the reverse test. The following message contains an Orion schema and you must translate it into the SQL, Neo4j, Cassandra, and MongoDB schemas.
+You should only translate the operations supported by those schemas; for the ones that cannot be translated, you will write "Operation not supported.". Remember 
+that the operations supported by each schema are described in the Orion chapter we provided during training, along with a reference image.
+
+[Instruction]
+You must pass him: [File: Orion2Schema/EduPlatformChange.orion]
+
+-------------------------------------------------------------------------------------
+
+Congratulations, you have successfully learned the Orion DSL.
+Use your memory function to remember it and to be able to use it in other chats.

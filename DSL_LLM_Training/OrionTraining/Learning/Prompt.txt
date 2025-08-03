@@ -1,0 +1,44 @@
+I’m going to train you on learning the Orion DSL. For this, I will provide the following information in 3 phases:
+    -Phase 1: I will show you the formal definition of the DSL.
+    -Phase 2: I will show you related articles about its creation, explanation, constraints, and characteristics.
+    -Phase 3: I will show you examples of Orion mapped to SQL, MongoDB Validator, Cassandra and Neo4j.
+
+While I’m showing you the phases, I don’t want you to say anything — simply memorize what I provide. Afterwards, when you receive the information 
+in each prompt, I want you to respond with “Received.” When I write “End of training”, then I want you to display:
+    - Comments or feedback about your learning (explain in detail how your experience was and what you think about the DSL).
+    - Questions or suggestions (state questions that are ambiguous or could be clarified for better understanding).
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Phase 1: The file with the formal declaration is attached.
+
+[Instruction]
+You must pass him: [File: 1-Step (Formal Definition)/Formal Specification.txt]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Phase 2: The files with articles related to the DSL are attached.
+
+[Instruction]
+You must pass him: [Folder: 2-Step (Articles) -> ChapterOrion.pdf, DesignOrion.pdf, OrionAllowed.png]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Phase 3: Examples are provided along with their corresponding mappings to relational schemas, Cassandra, MongoDB, and Neo4j.
+
+[Instruction. 
+Note 1: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly
+Note 2: The amount may exceed the token limit, and the message should be split depending on the subscription plan]
+You must pass him: [Folder: GameTracker -> GameTrackerChange.orion, GameTrackerChange.cql, GameTrackerChange.js, GameTrackerChange.sql, GameTrackerChange.cypher, GameTrackerChange[1-2].athena]
+You must pass him: [Folder: RunningSong -> RunningSongChange.orion, RunningSongChange.cql, RunningSongChange.js, RunningSongChange.sql, RunningSongChange.cypher, RunningSongChange[1-3].athena]
+
+-------------------------------------------------------------------------------------------------------------
+
+End of training.
+
+-------------------------------------------------------------------------------------------------------------
+
+(from this point on, any questions the LLM might have regarding the training should be resolved)

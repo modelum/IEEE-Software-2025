@@ -1,0 +1,6 @@
+A database schema is to be designed for managing the publication of books by publishing houses. The books have a code and a title. For each author, 
+we want to record their identifier, name, and nationality. The publishers have a code, name, address, and contact email. A publisher publishes 
+many different books. A single book can be published by more than one publisher. Each author can write several books. A book has only been written 
+by one author. All publishers have published at least one book. There are no books that haven’t been published by a publisher, 
+and there are no anonymous books. We don’t have books from every author. It is also important to know the price at which each book 
+is marketed by each publisher.

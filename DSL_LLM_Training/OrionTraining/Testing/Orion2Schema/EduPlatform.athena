@@ -1,0 +1,58 @@
+Schema EduPlatform:1
+
+// Reusable set of metadata
+fSet MetaInfo
+{
+  created_at: Timestamp,
+  updated_at: Timestamp
+}
+
+root entity User
+{
+  +id: Identifier,
+  !name: String,
+  !email: String /^.+@.+\\.com$/,
+  password: String,
+  profile: {displayName: String, ?avatar_url: String, ?bio: String},
+  enrolledCourses: ref<Course>*,
+  comments: aggr<Comment>*
+} U MetaInfo
+
+root entity Course
+{
+  +id: Identifier,
+  title: String,
+  description: String,
+  instructor: ref<User>&,
+  students: ref<User>*,
+  lessons: aggr<Lesson>,
+  tags: List<String>
+} U MetaInfo
+
+entity Lesson
+{
+  +id: Identifier,
+  title: String,
+  content: String,
+  duration: Integer (1..999),
+  resources: List<String>,
+  comments: aggr<Comment>*
+}
+
+root entity Comment
+{
+  +id: Identifier,
+  text: String,
+  author: ref<User>&,
+  lesson: ref<Lesson>&
+} + MetaInfo
+
+entity ReplyComment::Comment
+{
+  replied_to: ref<Comment>&
+}
+
+entity AttachmentComment::Comment
+{
+  attachment_url: String
+}
