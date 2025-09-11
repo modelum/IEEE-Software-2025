@@ -96,7 +96,6 @@ Each project follows the same internal organization, separating the training and
                 - 📄 Neo4j2Orion.cypher
                 - 📄 SQL2Orion.sql
             - 📄 Prompt.txt
-    - 📄 EntrenamientoConversación.html
 
 # File Description
 ## Training and Testing Prompts
