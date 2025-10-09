@@ -1,0 +1,13 @@
+When customers register in the store, they sign up as users and provide personal data, email, username, password, 
+and payment details (VISA, MasterCard, PayPal, or others). When a new user signs up, they can indicate that another user referred them. 
+When the new user makes a purchase, the referring user receives a 5% discount voucher for a purchase. A user can be premium to obtain 
+benefits such as free shipping. There is a product catalog. Each product is recorded with its name, price, description, image, manufacturer, 
+stock, and other attributes that depend on the product. Products are grouped into categories (Laptops, Printers, Drives, Monitors, etc.). 
+Each product has a list of related products. Users can share their opinion about the store and rate it from 1 to 5. A purchase made by a user 
+is recorded as a sale with one or more sale lines, and for each line the product and the number of units are recorded. For each sale, the 
+total amount and the date and time of the purchase must be recorded. Discounts can be applied to a sale and can be defined at any time. 
+A sale will record the discount if one has been applied. Discounts are recorded as a name with the prefix “DESC” and a description. More than 
+one discount can be applied to a purchase—for example, a DESC-BlackFriday plus a DESC-Referral. Delivery and potential product returns may be 
+out of scope for our migration. I suggest some queries: Q1. Products by one or more filters: type, size, price, … Q2. Purchases by a user within 
+a date range Q3. Products purchased by a user within a date range Q4. List of the 10 best-selling products in each country Q5. Users whose direct 
+or indirect referrals have submitted a negative rating Q6. List of products purchased by a user and by all of their direct or indirect referrals.

@@ -1,0 +1,86 @@
+Schema ECommerce:1
+
+/* ========== Reusable structures ========== */
+fSet PaymentInfo
+{
+  method: String in ("VISA", "MasterCard", "PayPal", "Other"),
+  card_number: String,
+  expiration_date: Timestamp,
+  cvv: Integer (100..999)
+}
+
+/* ========== User-related entities ========== */
+Root entity User
+{
+  +user_id: Identifier,
+  username: String,
+  email: String /^.+@.+\\.com$/,
+  password: String,
+  personal_data: {name: String, surname: String, address: String, country: String},
+  payment: Aggr<Payment>+,
+  referred_by: Ref<User>?,
+  premium: Boolean,
+  opinions: Aggr<Opinion>*,
+  sales: Aggr<Sale>*,
+  discount_vouchers: Aggr<DiscountVoucher>*
+}
+
+Entity Payment
+{
+  +payment_id: Identifier
+} U PaymentInfo
+
+Entity Opinion
+{
+  +opinion_id: Identifier,
+  rating: Integer (1..5),
+  comment: String,
+  created_at: Timestamp
+}
+
+Entity DiscountVoucher
+{
+  +voucher_id: Identifier,
+  discount: Ref<Discount>&,
+  percentage: Double (0..100)
+}
+
+/* ========== Product-related entities ========== */
+Root entity Product
+{
+  +product_id: Identifier,
+  name: String,
+  price: Double (0..9999999),
+  description: String,
+  image: String,
+  manufacturer: String,
+  stock: Integer (0..9999999),
+  attributes: Map<String, String>,
+  category: String in ("Portátiles", "Impresoras", "Discos", "Monitores"),
+  related_products: Ref<Product>*
+}
+
+/* ========== Sales and discounts ========== */
+Root entity Sale
+{
+  +sale_id: Identifier,
+  user: Ref<User>&,
+  total_amount: Double (0..9999999),
+  date_time: Timestamp,
+  lines: Aggr<SaleLine>+,
+  applied_discounts: Ref<Discount>*
+}
+
+Entity SaleLine
+{
+  +line_id: Identifier,
+  product: Ref<Product>&,
+  quantity: Integer (1..999999)
+}
+
+Root entity Discount
+{
+  +discount_id: Identifier,
+  name: String /^DESC-.+$/,
+  description: String
+}

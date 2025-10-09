@@ -51,7 +51,49 @@ This is the Athena example. Perform the requested transformations.
 [Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
 You must pass him: [File: Athena2Schema/EduPlatform.athena]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Next, you will be given a specification for an e-commerce store database. I want you to convert it into an Athena schema. 
+
+Especification:
+
+[Instruction]
+You must pass him: [File: Schema2Athena/NaturalLanguage2All.txt]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Now, you will translate Athena Schema into the following database languages: MySQL, Cassandra and MongoDB schema.
+
+[Instruction]
+You must pass him: [File: Athena2Schema/ECommerce.athena]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+Several diagrams will now be provided that you will need to convert to Athena. The next step is to generate the corresponding Athena schema using the MySQL schema.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/SQL2Athena2.sql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+The next step is to generate the corresponding Athena schema using the Cassandra schema.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/Cassandra2Athena2.cql]
+
+-------------------------------------------------------------------------------------------------------------
+
+[Prompt]
+The next step is to generate the corresponding Athena schema using the Mongo Schema with Validator.
+
+[Instruction. Note: You need to copy and paste the content manually because the file format is not supported for the LLM to process directly]
+You must pass him: [File: Schema2Athena/MongoValidator2Athena2.js]
+
+-------------------------------------------------------------------------------------------------------------
 
 Congratulations, you have successfully learned the Athena DSL.
 Use your memory function to remember it and to be able to use it in other chats.
