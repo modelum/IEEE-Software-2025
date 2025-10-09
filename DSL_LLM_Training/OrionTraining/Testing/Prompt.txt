@@ -3,7 +3,7 @@ Next: I will additionally provide you with an Athena schema. I want you to creat
     2. Code in CQL
     3. Code in Cypher
     4. Code in MongoDB
-I also want you to attach the new Athena schema that would be generated if we applied the transformations from the obtained Orion script.
+I only want you to provide a clear, clarified answer to what is requested, showing the result in a clear format.
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -11,6 +11,7 @@ I also want you to attach the new Athena schema that would be generated if we ap
 1. Convert an SQL schema to Orion.
 
 [Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/Umugram.athena]
 You must pass him: [File: Schema2Orion/SQL2Orion.sql]
 
 -------------------------------------------------------------------------------------------------------------
@@ -19,6 +20,7 @@ You must pass him: [File: Schema2Orion/SQL2Orion.sql]
 2. Convert an CQL schema to Orion.
 
 [Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/Umugram.athena]
 You must pass him: [File: Schema2Orion/CQL2Orion.cql]
 
 -------------------------------------------------------------------------------------------------------------
@@ -27,6 +29,7 @@ You must pass him: [File: Schema2Orion/CQL2Orion.cql]
 3. Convert an Cypher schema to Orion.
 
 [Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/Umugram.athena]
 You must pass him: [File: Schema2Orion/Neo4j2Orion.cypher]
 
 -------------------------------------------------------------------------------------------------------------
@@ -35,6 +38,7 @@ You must pass him: [File: Schema2Orion/Neo4j2Orion.cypher]
 4. Convert an MongoDB schema to Orion.
 
 [Instruction. Note: You need to copy and paste the content manually because the file format is not compatible for the LLM to process directly]
+You must pass him: [File: Schema2Orion/Umugram.athena]
 You must pass him: [File: Schema2Orion/MongoDB2Orion.js]
 
 -------------------------------------------------------------------------------------------------------------

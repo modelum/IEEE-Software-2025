@@ -1,5 +1,5 @@
 A series of exercises will now be presented to you so that we can verify the results of your learning. Here’s a brief description of the exercises:
-    1. Convert an SQL schema to Athena.
+    1. Convert a SQL schema to Athena.
     2. Convert a Cassandra schema to Athena.
     3. Convert a MongoDB schema with a validator to Athena.
     4. Convert a natural language example to Athena.
