@@ -96,7 +96,18 @@ Each project follows the same internal organization, separating the training and
                 - 📄 Neo4j2Orion.cypher
                 - 📄 SQL2Orion.sql
             - 📄 Prompt.txt
-
+    - 📁 **.M2T/**
+            - 📁 Athena/
+                - 📄 Athena2Cassandra.xtend
+                - 📄 Athena2MongoDBShemaValidator.xtend
+                - 📄 Athena2MySQL.xtend
+            - 📁 Orion/
+                - 📄 Orion2Cassandra.xtend
+                - 📄 Orion2MongoDB.xtend
+                - 📄 Orion2MySQL.xtend
+                - 📁 Orion/
+                    - 📄 MongoDBTransactionModule.xtend
+                    - 📄 SqlProcedureModule.xtend
 # File Description
 ## Training and Testing Prompts
 Each `prompt.txt` file contains multiple prompts used to train and evaluate the model.
