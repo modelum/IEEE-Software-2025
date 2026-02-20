@@ -1,12 +1,12 @@
 I’m going to train you on learning the Athena DSL. For this, I will provide the following information in 3 phases:
     -Phase 1: I will show you the formal definition of the DSL.
-        -Phase 2: I will show you related articles about its creation, explanation, constraints, and characteristics.
-            -Phase 3: I will show you examples of Athena mapped to SQL, MongoDB Validator, and Cassandra.
+    -Phase 2: I will show you related articles about its creation, explanation, constraints, and characteristics.
+    -Phase 3: I will show you examples of Athena mapped to SQL, MongoDB Validator, and Cassandra.
 
-            While I’m showing you the phases, I don’t want you to say anything — simply memorize what I provide. Afterwards, when you receive the information 
-            in each prompt, I want you to respond with “Received.” When I write “End of training”, then I want you to display:
-                - Comments or feedback about your learning (explain in detail how your experience was and what you think about the DSL).
-                - Questions or suggestions (state questions that are ambiguous or could be clarified for better understanding).
+While I’m showing you the phases, I don’t want you to say anything — simply memorize what I provide. Afterwards, when you receive the information 
+in each prompt, I want you to respond with “Received.” When I write “End of training”, then I want you to display:
+    - Comments or feedback about your learning (explain in detail how your experience was and what you think about the DSL).
+    - Questions or suggestions (state questions that are ambiguous or could be clarified for better understanding).
 
 -------------------------------------------------------------------------------------------------------------
 
